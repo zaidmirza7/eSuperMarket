@@ -11,24 +11,24 @@ export const ProductItem = () => {
           <Button
             onClick={() =>
               dispatch({
-                type: "ADD_PRODUCT",
-                data: ["Soap", "Tata Namak"],
-              })
-            }
-          >
-            +
-          </Button>
-        </Col>
-        <Col>
-          <Button
-            onClick={() =>
-              dispatch({
                 type: "REMOVE_PRODUCT",
                 data: "Soap",
               })
             }
           >
             -
+          </Button>
+        </Col>
+        <Col>
+          <Button
+            onClick={() =>
+              dispatch({
+                type: "ADD_PRODUCT",
+                data: ["Soap", "Tata Namak"],
+              })
+            }
+          >
+            +
           </Button>
         </Col>
       </Row>
