@@ -2,7 +2,7 @@ export const productReducer = (state = { product: ["Nike Shoes"] }, action) => {
   if (action.type === "ADD_PRODUCT") {
     return {
       ...state,
-      product: [...action.data, ...state.product],
+      product: [...action.data],
     };
   }
   if (action.type === "REMOVE_PRODUCT") {
