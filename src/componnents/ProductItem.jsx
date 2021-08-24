@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Row, Col, Card, Button, Form, Image } from "react-bootstrap";
+import { Row, Col, Card, Button, Form, Image, Nav} from "react-bootstrap";
+import { Route } from "./Product Details/Routerer";
 
 export const ProductItem = ({ item }) => {
   const dispatch = useDispatch();
@@ -29,6 +30,11 @@ export const ProductItem = ({ item }) => {
             -
           </Button>
         </Col>
+        <Col md={3}>
+          <Nav.Link to="/ProductDetails">
+        <Button>View</Button>
+        </Nav.Link>
+        </Col>
         <Col>
           <Button
             onClick={() =>
@@ -40,7 +46,8 @@ export const ProductItem = ({ item }) => {
           >
             +
           </Button>
-        </Col>
+        </Col>  
+        
       </Row>
     </Card>
   );

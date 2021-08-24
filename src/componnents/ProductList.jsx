@@ -4,10 +4,19 @@ import { Card, Row, Col } from "react-bootstrap";
 import { ProductItem } from "./ProductItem";
 import { useEffect } from "react";
 
-export const ProductList = () => {
+export const ProductList = ({searchText}) => {
   const myProducts = useSelector((state) => state.productReducer.product);
   const [prods, setProds] = useState([]);
 
+
+  useEffect(() =>{
+    if (searchText !==""){
+      const filteredProducts = myProducts.filter((item) => 
+      item.title.toUpperCase().includes(searchText.toUpperCase())
+      );
+      setProds([...filteredProducts])
+    }
+  },[searchText]);
   useEffect(() => {
     setProds([...myProducts]);
   }, [myProducts]);

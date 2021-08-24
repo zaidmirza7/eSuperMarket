@@ -1,16 +1,16 @@
 .productitem{
-    background-color: aquamarine !important;
+    background-color: rgb(187, 236, 238) !important;
     margin: 5px;
     padding: 5px;
     text-align: center;
 }
 .productlist{
-    background-color: brown !important;
+    background-color: rgb(163, 139, 250) !important;
     margin: 10px;
     padding: 10px;
 }
 .topnav{
-    background-color:orange !important;
+    background-color:rgb(211, 90, 90) !important;
     margin: 5px;
     padding: 5px;
 }
